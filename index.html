@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>秋元洋希 | Hiroki Akimoto</title>
-  <!-- SEO meta -->
-  <meta name="description" content="秋元洋希 (Hiroki Akimoto) 公式サイト。博士課程・JSPS 特別研究員 DC1。ヘビの匂い・行動を中心に化学生態学を研究。論文・講演・研究費情報など。">
+  <!-- SEO -->
+  <meta name="description" content="秋元洋希 (Hiroki Akimoto) 公式サイト。博士課程・JSPS 特別研究員 DC1。ヘビの匂いと行動を中心に化学生態学を研究。論文・講演・研究費・お知らせなど。" />
   <link rel="canonical" href="https://h-amoto.github.io/" />
-  <!-- Google Fonts -->
+  <!-- Fonts & Tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
-  <!-- Tailwind CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
     :root{--accent:#004b8d;--bg:#f7f7f2;}
@@ -27,55 +26,55 @@
   </style>
 </head>
 <body class="overflow-x-hidden">
-<!-- ========== NAV ========== -->
+<!-- NAV -->
 <header class="fixed inset-x-0 top-0 bg-white shadow z-50">
   <div class="container mx-auto flex justify-between items-center px-4 py-3">
     <a href="#top" class="text-xl font-bold text-blue-700">秋元洋希 / Hiroki&nbsp;Akimoto</a>
     <nav class="hidden md:flex space-x-6 text-sm font-semibold">
-      <a href="#news">News</a><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#presentations">Talks</a><a href="#funding">Funding</a><a href="#teaching">Teaching</a><a href="#gallery">Photos</a><a href="#contact">Contact</a>
+      <a href="#news">News</a><a href="#about">About</a><a href="#research">Research</a>
+      <a href="#publications">Publications</a><a href="#presentations">Talks</a>
+      <a href="#funding">Funding</a><a href="#teaching">Teaching</a><a href="#gallery">Photos</a><a href="#contact">Contact</a>
     </nav>
-    <button id="menuBtn" class="md:hidden">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-    </button>
+    <button id="menuBtn" class="md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
   </div>
   <div id="mobileMenu" class="hidden md:hidden bg-white border-t text-sm font-semibold"></div>
 </header>
 
-<!-- ========== HERO ========== -->
+<!-- HERO -->
 <section id="top" class="relative pt-32 bg-cover bg-center" style="background-image:url('images/IMG_3352.jpeg');">
   <div class="absolute inset-0 bg-black bg-opacity-60"></div>
   <div class="relative text-center text-white py-24 px-6">
     <h1 class="text-4xl md:text-6xl font-bold mb-2">秋元 洋希<br><span class="text-2xl md:text-4xl font-light">Hiroki Akimoto</span></h1>
     <p class="text-lg md:text-xl mb-2">博士課程・JSPS 特別研究員 (DC1)</p>
-    <p class="max-w-2xl mx-auto mb-6">Behavioral & Chemical Ecology — exploring odor‑mediated predator–prey interactions and communication in reptiles.</p>
-    <a href="#about" class="bg-blue-700 hover:bg-blue-600 text-white px-6 py-3 rounded-full shadow transition">Read More</a>
+    <p class="max-w-2xl mx-auto mb-6">Behavioral & Chemical Ecology — exploring odor-mediated predator–prey interactions and communication in reptiles.</p>
+    <a href="#about" class="bg-blue-700 hover:bg-blue-600 text-white px-6 py-3 rounded-full shadow">Read More</a>
   </div>
 </section>
 
-<!-- ========== NEWS ========== -->
+<!-- NEWS -->
 <section id="news" class="py-16 bg-gray-50">
   <div class="container mx-auto max-w-4xl px-6">
     <h2 class="circle mb-8"><span class="jp">お知らせ</span><span class="en">News</span></h2>
     <ul class="space-y-4 text-sm md:text-base fade" data-f>
-      <li class="flex justify-between border-b pb-2"><span>2025-05-30</span><span>サイトをリニューアルしました</span></li>
+      <li class="flex justify-between border-b pb-2"><span>2025-05-31</span><span>サイトを全面更新しました</span></li>
       <li class="flex justify-between border-b pb-2"><span>2025-03-16</span><span>日本生態学会でポスター賞（優秀賞）受賞</span></li>
-      <li class="flex justify-between border-b pb-2"><span>2024-11-03</span><span>日本動物行動学会で口頭発表</span></li>
+      <li class="flex justify-between border-b pb-2"><span>2024-11-03</span><span>日本動物行動学会で口頭発表を行いました</span></li>
     </ul>
   </div>
 </section>
 
-<!-- ========== ABOUT ========== -->
+<!-- ABOUT -->
 <section id="about" class="py-16 bg-white">
   <div class="container mx-auto max-w-4xl px-6">
     <h2 class="circle mb-8"><span class="jp">自己紹介</span><span class="en">About</span></h2>
-    <p class="mb-6 fade" data-f>ヘビをモデルに<strong>匂い</strong>と<strong>行動</strong>が織り成す間接防御メカニズムを研究。化学コミュニケーション・捕食回避・行動生態がキーワード。</p>
+    <p class="mb-6 fade" data-f>ヘビをモデルに<strong>匂い</strong>と<strong>行動</strong>が織り成す間接防御メカニズムを研究。特に化学コミュニケーションと捕食回避行動に注目しています。</p>
 
     <div class="grid md:grid-cols-2 gap-8 text-sm">
       <div class="fade" data-f>
         <h3 class="font-semibold text-blue-700 mb-2">基本情報</h3>
         <ul class="list-disc list-inside space-y-1">
-          <li>博士課程（生命理工学専攻） — 早稲田大学</li>
-          <li>JSPS 特別研究員 (DC1)</li>
+          <li>早稲田大学 大学院先進理工学研究科 生命理工学専攻（博士課程）</li>
+          <li>日本学術振興会 特別研究員 (DC1)</li>
           <li>Email : autumnorigin@akane.waseda.jp</li>
         </ul>
       </div>
@@ -83,8 +82,8 @@
         <h3 class="font-semibold text-blue-700 mb-2">キーワード</h3>
         <div class="flex flex-wrap gap-2">
           <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Chemical communication</span>
-          <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Predator avoidance</span>
           <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Behavioral ecology</span>
+          <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Predator avoidance</span>
           <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Indirect defense</span>
         </div>
       </div>
@@ -92,71 +91,64 @@
   </div>
 </section>
 
-<!-- ========== RESEARCH ========== -->
+<!-- RESEARCH -->
 <section id="research" class="py-16 bg-gray-50">
   <div class="container mx-auto max-w-4xl px-6">
     <h2 class="circle mb-8"><span class="jp">研究テーマ</span><span class="en">Research</span></h2>
     <div class="grid md:grid-cols-2 gap-6">
       <article class="card p-6 flex space-x-4 fade" data-f>
-        <img src="images/proj_curse.svg" class="w-16 h-16" alt="">
+        <img src="images/proj_curse.svg" class="w-16 h-16" alt="curse">
         <div><h3 class="text-lg font-semibold mb-1">ヘビの“呪い”仮説</h3><p>咬傷後の悪臭が天敵を誘引し攻撃者を抑止する間接防御を検証。</p></div>
       </article>
       <article class="card p-6 flex space-x-4 fade" data-f>
-        <img src="images/proj_vibration.svg" class="w-16 h-16" alt="">
+        <img src="images/proj_vibration.svg" class="w-16 h-16" alt="vibration">
         <div><h3 class="text-lg font-semibold mb-1">振動コミュニケーション</h3><p>基質振動によるヘビ類の情報伝達機構を解明。</p></div>
       </article>
       <article class="card p-6 flex space-x-4 fade" data-f>
-        <img src="images/proj_biodiversity.svg" class="w-16 h-16" alt="">
+        <img src="images/proj_biodiversity.svg" class="w-16 h-16" alt="biodiversity">
         <div><h3 class="text-lg font-semibold mb-1">多様性調査 & 保全</h3><p>爬虫類・昆虫の分布調査と保全提言。</p></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ========== PUBLICATIONS ========= -->
-<section id="publications" class="py-16 bg-white"> ... <!-- (unchanged content) -->
-</section>
+<!-- PUBLICATIONS -->
+<section id="publications" class="py-16 bg-white"> ... </section>
+<!-- PRESENTATIONS -->
+<section id="presentations" class="py-16 bg-gray-50"> ... </section>
+<!-- FUNDING -->
+<section id="funding" class="py-16 bg-white"> ... </section>
 
-<!-- ========== PRESENTATIONS ========= -->
-<section id="presentations" class="py-16 bg-gray-50"> ... <!-- (unchanged content with poster award line already merged) -->
-</section>
-
-<!-- ========== FUNDING ========= -->
-<section id="funding" class="py-16 bg-white"> ... <!-- poster award removed -->
-</section>
-
-<!-- ========== TEACHING ========= -->
+<!-- TEACHING -->
 <section id="teaching" class="py-16 bg-gray-50">
   <div class="container mx-auto max-w-4xl px-6">
     <h2 class="circle mb-8"><span class="jp">担当科目</span><span class="en">Teaching</span></h2>
     <ul class="list-disc list-inside space-y-1 text-sm fade" data-f>
-      <li>2024&nbsp;–&nbsp; 生物学実験 VIII (TA) — 早稲田大学 教育学部</li>
-      <li>2023&nbsp;–&nbsp; 生物学実験 VIII (TA) — 早稲田大学 教育学部</li>
-      <li>2022&nbsp;–&nbsp; 生物学実験 VIII (TA) — 早稲田大学 教育学部</li>
+      <li>2024 – 生物学実験 VIII (TA) — 早稲田大学 教育学部</li>
+      <li>2023 – 生物学実験 VIII (TA) — 早稲田大学 教育学部</li>
+      <li>2022 – 生物学実験 VIII (TA) — 早稲田大学 教育学部</li>
     </ul>
   </div>
 </section>
 
-<!-- ========== GALLERY ========= -->
+<!-- GALLERY -->
 <section id="gallery" class="py-16 bg-white">
   <div class="container mx-auto max-w-4xl px-6">
     <h2 class="circle mb-8"><span class="jp">フォト</span><span class="en">Gallery</span></h2>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 fade" data-f>
-      <img src="images/photo_field.jpg" alt="field work" class="rounded-lg shadow">
+      <img src="images/photo_field.jpg" alt="field" class="rounded-lg shadow">
       <img src="images/photo_lab.jpg" alt="lab" class="rounded-lg shadow">
       <img src="images/photo_conference.jpg" alt="conference" class="rounded-lg shadow">
     </div>
   </div>
 </section>
 
-<!-- ========== CONTACT ========= -->
+<!-- CONTACT -->
 <section id="contact" class="py-16 bg-gray-50"> ... </section>
-
 <footer class="bg-white border-t py-6 text-center text-xs text-gray-500"> ... </footer>
-
 <script>
-const menuBtn=document.getElementById('menuBtn');const mobileMenu=document.getElementById('mobileMenu');menuBtn&&menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
-document.addEventListener('DOMContentLoaded',()=>{const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:0.15});document.querySelectorAll('.fade').forEach(el=>io.observe(el));});
+const menuBtn=document.getElementById('menuBtn');const mobileMenu=document.getElementById('mobileMenu');menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+document.addEventListener('DOMContentLoaded',()=>{const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('show')),{threshold:0.15});document.querySelectorAll('.fade').forEach(el=>io.observe(el));});
 </script>
 </body>
 </html>
