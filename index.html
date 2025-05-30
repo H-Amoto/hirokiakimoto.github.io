@@ -3,166 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>秋元洋希研究室 | Chemical Ecology Lab</title>
+  <title>秋元洋希 研究室 | Chemical Ecology Lab</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
-  <!-- TailwindCSS CDN (no build needed) -->
+  <!-- Tailwind CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-
-  <!-- ===== Custom CSS ===== -->
   <style>
-    :root{
-      --accent:#004b8d;          /* 深紺 */
-      --accent-light:#0466c8;    /* 明るめ紺 */
-      --bg-cream:#f6f6f0;        /* クリーム背景 */
-    }
-    body{background:var(--bg-cream);font-family:"Quicksand","Zen Maru Gothic",sans-serif;}
+    :root{--accent:#004b8d;--accent-light:#0466c8;--bg:#f6f6f0;}
+    body{background:var(--bg);font-family:"Quicksand","Zen Maru Gothic",sans-serif;}
     h1,h2,h3,h4{font-weight:700;color:var(--accent);}
-    /* 見出しの丸アイコン */
-    .circle-head{position:relative;display:inline-block;padding-left:3rem;}
-    .circle-head::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:2.2rem;height:2.2rem;border-radius:50%;background:var(--accent);}  
-    .circle-head .en{display:block;font-size:0.8rem;color:#575757;line-height:1.1;}
-
-    /* カード */
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:0.75rem;box-shadow:0 2px 6px rgba(0,0,0,.08);}
-
-    /* フェードアップアニメ */
-    @keyframes fade-up{0%{opacity:0;transform:translateY(40px);}100%{opacity:1;transform:none;}}
-    .fade-up{opacity:0;}
-    .fade-up.show{animation:fade-up .8s ease-out forwards;}
+    .circle{position:relative;display:inline-block;padding-left:3rem;}
+    .circle::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:2.2rem;height:2.2rem;border-radius:50%;background:var(--accent);}
+    .circle .en{display:block;font-size:.8rem;color:#555;line-height:1.1;}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+    @keyframes fade{0%{opacity:0;transform:translateY(40px);}100%{opacity:1;transform:none;}}
+    .fade{opacity:0;}.show{animation:fade .8s ease-out forwards;}
   </style>
 </head>
 <body class="overflow-x-hidden">
-
-<!-- ====== Fixed Navbar ====== -->
-<header class="fixed top-0 w-full bg-white shadow z-50">
-  <div class="container mx-auto flex items-center justify-between px-4 py-3">
+<!-- ========= NAV ========= -->
+<header class="fixed w-full top-0 bg-white shadow z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
     <a href="#top" class="text-xl font-bold text-blue-700">Akimoto&nbsp;Lab</a>
-    <nav class="hidden md:flex space-x-8 text-sm font-semibold">
+    <nav class="hidden md:flex space-x-6 text-sm font-semibold">
       <a href="#about" class="hover:text-blue-600">About</a>
       <a href="#news" class="hover:text-blue-600">News</a>
       <a href="#research" class="hover:text-blue-600">Research</a>
-      <a href="#publications" class="hover:text-blue-600">Papers</a>
+      <a href="#publications" class="hover:text-blue-600">Publications</a>
+      <a href="#presentations" class="hover:text-blue-600">Talks</a>
+      <a href="#funding" class="hover:text-blue-600">Funding</a>
       <a href="#contact" class="hover:text-blue-600">Contact</a>
     </nav>
-    <button id="menuBtn" class="md:hidden focus:outline-none">
+    <button id="menuBtn" class="md:hidden">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" fill="none"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
   </div>
-  <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 pb-4 text-sm font-semibold">
-    <a href="#about" class="block px-4 py-2">About</a>
-    <a href="#news" class="block px-4 py-2">News</a>
-    <a href="#research" class="block px-4 py-2">Research</a>
-    <a href="#publications" class="block px-4 py-2">Papers</a>
-    <a href="#contact" class="block px-4 py-2">Contact</a>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t pb-4 text-sm font-semibold">
+    <a href="#about" class="block py-2 px-4">About</a>
+    <a href="#news" class="block py-2 px-4">News</a>
+    <a href="#research" class="block py-2 px-4">Research</a>
+    <a href="#publications" class="block py-2 px-4">Publications</a>
+    <a href="#presentations" class="block py-2 px-4">Talks</a>
+    <a href="#funding" class="block py-2 px-4">Funding</a>
+    <a href="#contact" class="block py-2 px-4">Contact</a>
   </div>
 </header>
 
-<!-- ====== Hero ====== -->
-<section id="top" class="pt-32 bg-cover bg-center" style="background-image:url('images/hero_snake.jpg');">
-  <div class="backdrop-brightness-75 py-24 px-6 text-center text-white">
+<!-- ========= HERO ========= -->
+<section id="top" class="pt-32 bg-cover bg-center" style="background-image:url('images/IMG_3352.jpeg');">
+  <div class="backdrop-brightness-75 text-center text-white py-24 px-6">
     <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
       <span class="block">匂いで読み解く</span>
       <span class="block">動物の世界</span>
       <span class="en text-3xl md:text-4xl font-light text-gray-200">Decoding the Animal World through Chemical Ecology</span>
     </h1>
     <p class="max-w-2xl mx-auto mb-8">化学シグナルと行動を結びつけ、捕食—被食関係のダイナミクスを解明する研究室です。</p>
-    <a href="#about" class="inline-block bg-blue-700 hover:bg-blue-600 transition text-white px-6 py-3 rounded-full shadow">Learn&nbsp;More</a>
+    <a href="#about" class="bg-blue-700 hover:bg-blue-600 text-white px-6 py-3 rounded-full shadow transition">Learn&nbsp;More</a>
   </div>
 </section>
 
-<!-- ====== News ====== -->
+<!-- ========= NEWS ========= -->
 <section id="news" class="py-16 bg-gray-50">
-  <div class="container mx-auto px-6 max-w-4xl">
-    <h2 class="circle-head mb-8"><span class="jp">お知らせ</span><span class="en">News</span></h2>
+  <div class="container mx-auto max-w-4xl px-6">
+    <h2 class="circle mb-8"><span class="jp">お知らせ</span><span class="en">News</span></h2>
     <ul class="space-y-4 text-sm md:text-base">
-      <li class="flex justify-between border-b pb-2 fade-up" data-aos><span>2025.05.10</span><span>ポスター賞（日本生態学会）受賞</span></li>
-      <li class="flex justify-between border-b pb-2 fade-up" data-aos><span>2025.04.01</span><span>JSPS DC1 採択</span></li>
-      <li class="flex justify-between border-b pb-2 fade-up" data-aos><span>2024.12.15</span><span>研究ブログ開設</span></li>
+      <li class="flex justify-between border-b pb-2 fade" data-f>2025.05.10 <span>ポスター賞（日本生態学会）受賞</span></li>
+      <li class="flex justify-between border-b pb-2 fade" data-f>2025.04.01 <span>JSPS DC1 採択</span></li>
+      <li class="flex justify-between border-b pb-2 fade" data-f>2024.12.15 <span>研究ブログ開設</span></li>
     </ul>
   </div>
 </section>
 
-<!-- ====== About ====== -->
+<!-- ========= ABOUT ========= -->
 <section id="about" class="py-16 bg-white">
-  <div class="container mx-auto px-6 max-w-4xl">
-    <h2 class="circle-head mb-8"><span class="jp">研究室について</span><span class="en">About</span></h2>
-    <p class="mb-6 fade-up" data-aos>私は<strong>秋元洋希</strong>、JSPS 特別研究員（DC1）として早稲田大学大学院で<strong>匂い</strong>を介した捕食回避行動や化学コミュニケーションを研究しています。My work bridges behavioral ecology, chemical analysis, and conservation.</p>
+  <div class="container mx-auto max-w-4xl px-6">
+    <h2 class="circle mb-8"><span class="jp">研究室について</span><span class="en">About</span></h2>
+    <p class="mb-6 fade" data-f>私は<strong>秋元洋希</strong>、JSPS 特別研究員（DC1）として早稲田大学大学院で<strong>化学コミュニケーション</strong>と<strong>行動生態</strong>を探求しています。My research integrates behavioral experiments, field ecology and analytical chemistry to reveal odor-mediated indirect defenses in reptiles.</p>
+
     <div class="grid md:grid-cols-2 gap-8 text-sm">
-      <div class="fade-up" data-aos>
-        <h3 class="font-semibold text-blue-700 mb-2">研究キーワード</h3>
+      <div class="fade" data-f>
+        <h3 class="font-semibold text-blue-700 mb-2">研究キーワード / Keywords</h3>
         <ul class="list-disc list-inside space-y-1">
           <li>Chemical communication</li>
           <li>Predator avoidance</li>
           <li>Behavioral ecology</li>
+          <li>Indirect defense</li>
+          <li>Biodiversity & Conservation</li>
         </ul>
       </div>
-      <div class="fade-up" data-aos>
-        <h3 class="font-semibold text-blue-700 mb-2">所属</h3>
-        <p>早稲田大学 先進理工学研究科<br/>日本学術振興会 特別研究員 (DC1)</p>
+      <div class="fade" data-f>
+        <h3 class="font-semibold text-blue-700 mb-2">学歴 / Education</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Ph.D. in Science (ongoing) — Waseda University, 2022-</li>
+          <li>M.Sc. in Science — Waseda University, 2024</li>
+          <li>B.Sc. in Science — Waseda University, 2022</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 text-sm mt-10">
+      <div class="fade" data-f>
+        <h3 class="font-semibold text-blue-700 mb-2">職歴 / Appointments</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>2024-Present — JSPS Research Fellow (DC1), Waseda Univ.</li>
+          <li>2022-Present — PhD Candidate, Waseda Univ.</li>
+        </ul>
+      </div>
+      <div class="fade" data-f>
+        <h3 class="font-semibold text-blue-700 mb-2">教育歴 / Teaching</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Teaching Assistant, Biology Experiment VIII, Waseda University (2022-2024)</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ====== Research ====== -->
+<!-- ========= RESEARCH ========= -->
 <section id="research" class="py-16 bg-gray-50">
-  <div class="container mx-auto px-6 max-w-4xl">
-    <h2 class="circle-head mb-8"><span class="jp">研究</span><span class="en">Research</span></h2>
-
+  <div class="container mx-auto max-w-4xl px-6">
+    <h2 class="circle mb-8"><span class="jp">研究</span><span class="en">Research</span></h2>
     <div class="grid md:grid-cols-2 gap-6">
-      <!-- Project 1 -->
-      <article class="card p-6 flex items-start space-x-4 fade-up" data-aos>
-        <img src="images/proj_curse.svg" class="w-16 h-16 flex-shrink-0" alt=""/>
+      <article class="card p-6 flex items-start space-x-4 fade" data-f>
+        <img src="images/proj_curse.svg" class="w-16 h-16" alt="curse icon" />
         <div>
           <h3 class="text-lg font-semibold text-blue-800 mb-1">ヘビの“呪い”仮説</h3>
-          <p>咬傷後に放出される匂いが第三の捕食者を誘引し、攻撃者を抑止するかを検証。</p>
+          <p>咬傷後に放出される悪臭が上位捕食者を誘引し、攻撃者を抑止する間接防御を検証。</p>
         </div>
       </article>
-      <!-- Project 2 -->
-      <article class="card p-6 flex items-start space-x-4 fade-up" data-aos>
-        <img src="images/proj_vibration.svg" class="w-16 h-16 flex-shrink-0" alt=""/>
+      <article class="card p-6 flex items-start space-x-4 fade" data-f>
+        <img src="images/proj_vibration.svg" class="w-16 h-16" alt="vibration icon" />
         <div>
           <h3 class="text-lg font-semibold text-blue-800 mb-1">振動コミュニケーション</h3>
-          <p>基質振動によるヘビの情報伝達メカニズムを解明します。</p>
+          <p>基質振動を介したヘビの体内シグナル伝達を明らかにする。</p>
+        </div>
+      </article>
+      <article class="card p-6 flex items-start space-x-4 fade" data-f>
+        <img src="images/proj_indirect.svg" class="w-16 h-16" alt="indirect icon" />
+        <div>
+          <h3 class="text-lg font-semibold text-blue-800 mb-1">匂いによる間接防御ネットワーク</h3>
+          <p>多種間に広がる化学防御ネットワークを数理モデルと野外実験で解析。</p>
+        </div>
+      </article>
+      <article class="card p-6 flex items-start space-x-4 fade" data-f>
+        <img src="images/proj_biodiversity.svg" class="w-16 h-16" alt="biodiversity icon" />
+        <div>
+          <h3 class="text-lg font-semibold text-blue-800 mb-1">多様性調査 & 保全</h3>
+          <p>国内外で爬虫類・昆虫の分布調査を行い、保全計画に貢献。</p>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ====== Publications ====== -->
+<!-- ========= PUBLICATIONS ========= -->
 <section id="publications" class="py-16 bg-white">
-  <div class="container mx-auto px-6 max-w-4xl">
-    <h2 class="circle-head mb-8"><span class="jp">研究業績</span><span class="en">Publications</span></h2>
-    <ol class="list-decimal list-inside space-y-3 text-sm max-w-3xl fade-up" data-aos>
-      <li>秋元洋希 (2023) “<em>Indotyphlops braminus</em> の捕食報告.” <u>Herpetological Review</u> 54(3): 486.</li>
-      <li>Hamanaka, K.; <strong>Akimoto, H.</strong>; et&nbsp;al. (2023) “Diet of <em>Andrias japonicus</em>.” <u>Herpetological Review</u>.</li>
+  <div class="container mx-auto max-w-4xl px-6">
+    <h2 class="circle mb-8"><span class="jp">研究業績</span><span class="en">Publications</span></h2>
+    <h3 class="font-semibold text-blue-700 mb-2 fade" data-f>査読論文 / Peer-reviewed</h3>
+    <ol class="list-decimal list-inside space-y-2 text-sm fade" data-f>
+      <li><strong>Akimoto, H.</strong> (2023) “<em>Indotyphlops braminus</em>: Predation.” <u>Herpetological Review</u> 54(3):486.</li>
+      <li>Hamanaka, K.; <strong>Akimoto, H.</strong>; Otake, A.; et&nbsp;al. (2023) “<em>Andrias japonicus</em>: Diet.” <u>Herpetological Review</u>.</li>
+      <li><strong>Akimoto, H.</strong> (2020) “<em>Indotyphlops braminus</em>.” <u>Herpetological Review</u> 51(3):554.</li>
     </ol>
+
+    <h3 class="font-semibold text-blue-700 mt-8 mb-2 fade" data-f>MISC / Notes</h3>
+    <ul class="list-disc list-inside space-y-1 text-sm fade" data-f>
+      <li>Records of <em>Oonokobayoto</em> in Gifu Prefecture. <u>Gekkan Mushi</u> 650:51 (2025).</li>
+      <li>Eighteen new moth records from Hachijō Island. <u>Moth Comms</u> 312:352-354 (2024).</li>
+      <li>Additional faunistic notes on insects in Hyogo (2022-2024).</li>
+    </ul>
   </div>
 </section>
 
-<!-- ====== Contact ====== -->
+<!-- ========= PRESENTATIONS ========= -->
+<section id="presentations" class="py-16 bg-gray-50">
+  <div class="container mx-auto max-w-4xl px-6">
+    <h2 class="circle mb-8"><span class="jp">学会発表</span><span class="en">Presentations</span></h2>
+    <ul class="list-disc list-inside space-y-2 text-sm fade" data-f>
+      <li>"Why Do Snakes Stink? Testing the Curse Hypothesis." 62nd Japanese Herpetological Society, Dec 2023.</li>
+      <li>Poster, Ecological Society of Japan, Mar 2025.</li>
+      <li>“Odor-Mediated Indirect Defense in Snakes.” Animal Behavior Society of Japan, Nov 2024.</li>
+      <li>“Snake Curse Invites Predators.” Joint Ecology Meeting (Taiwan-Japan), Nov 2024.</li>
+      <li>“Vibration Communication in Snakes.” Statistical Modeling & Animal Behavior WS, Jan 2025.</li>
+      <li>＋6 その他（詳細は CV 参照）。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========= FUNDING & AWARDS ========= -->
+<section id="funding" class="py-16 bg-white">
+  <div class="container mx-auto max-w-4xl px-6">
+    <h2 class="circle mb-8"><span class="jp">研究費・受賞</span><span class="en">Funding & Awards</span></h2>
+    <ul class="list-disc list-inside space-y-2 text-sm fade" data-f>
+      <li><strong>JSPS Research Fellowship Grant</strong> (2024-2027) — “Testing the Snake Curse Hypothesis.”</li>
+      <li><strong>incu·be Prize</strong> (2025-2026) — “Vibration Communication in Snakes.”</li>
+      <li><strong>Early Bird Program Grant</strong>, Waseda University (2024-2025).</li>
+      <li><strong>Poster Award (Excellence)</strong>, Ecological Society of Japan (Mar 2025).</li>
+    </ul>
+
+    <h3 class="font-semibold text-blue-700 mt-8 mb-2 fade" data-f>社会貢献 / Outreach</h3>
+    <ul class="list-disc list-inside space-y-1 text-sm fade" data-f>
+      <li><strong>Innoqua Quest</strong> — Lecturer & Organizer, Innoqua Co. (Apr 2025).</li>
+      <li><strong>Science Café 2022</strong> — Lecturer, Terumo Life Science Foundation (Jul 2022).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========= CONTACT ========= -->
 <section id="contact" class="py-16 bg-gray-50">
-  <div class="container mx-auto px-6 max-w-4xl text-center">
-    <h2 class="circle-head inline-block mb-8"><span class="jp">連絡先</span><span class="en">Contact</span></h2>
-    <p class="mb-2 fade-up" data-aos>Email: <a href="mailto:autumnorigin@akane.waseda.jp" class="text-blue-700 hover:underline">autumnorigin@akane.waseda.jp</a></p>
-    <p class="fade-up" data-aos>Twitter/X: <a href="https://twitter.com/" class="text-blue-700 hover:underline">@ComingSoon</a></p>
+  <div class="container mx-auto max-w-4xl px-6 text-center">
+    <h2 class="circle inline-block mb-8"><span class="jp">連絡先</span><span class="en">Contact</span></h2>
+    <p class="mb-2 fade" data-f>Email: <a href="mailto:autumnorigin@akane.waseda.jp" class="text-blue-700 hover:underline">autumnorigin@akane.waseda.jp</a></p>
+    <p class="fade" data-f>Twitter/X: <a href="https://twitter.com/" class="text-blue-700 hover:underline">@ComingSoon</a></p>
   </div>
 </section>
 
-<!-- ====== Footer ====== -->
+<!-- ========= FOOTER ========= -->
 <footer class="bg-white border-t py-6 text-center text-xs text-gray-500 relative">
   <p class="mb-2">© 2025 Hiroki Akimoto</p>
   <p class="italic">“You cannot build world peace on empty stomachs and human misery.” — Norman Borlaug</p>
-  <a href="#top" class="absolute right-4 top-2 md:top-3 text-blue-700 hover:underline">▲ Top</a>
-</footer>
-
-<!-- ====== JavaScript (menu & fade) ====== -->
-<script>
-  // Mobile menu toggle
-  const menuBtn=document.getElementById('menuBtn');
-  const mobileMenu=document.getElementById('mobileMenu');
-  menuBtn&&menuBtn.addEvent
+  <a href="#top" class="absolute right-4 top-2 md:top-3 text-blue
