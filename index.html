@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lang-en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,66 +7,188 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #9333ea 100%); }
+    body{font-family:'Inter',sans-serif}
+    .gradient-bg{background:linear-gradient(135deg,#1e3a8a 0%,#9333ea 100%)}
   </style>
 </head>
 <body class="text-gray-800">
+  <!-- Language Toggle -->
+  <div class="fixed top-4 right-4 z-50">
+    <button id="langToggle" class="bg-white/80 backdrop-blur px-4 py-1 rounded-full shadow font-semibold text-sm">日本語</button>
+  </div>
+
   <!-- Hero -->
-  <section class="gradient-bg text-white py-24">
+  <header class="gradient-bg text-white py-24">
     <div class="container mx-auto px-6">
       <h1 class="text-4xl md:text-6xl font-bold mb-4">Hiroki Akimoto</h1>
-      <p class="text-xl md:text-2xl mb-6">JSPS DC1 Fellow &amp; PhD Candidate<br>Behavioral and Chemical Ecology</p>
-      <a href="#research" class="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition">See My Research</a>
+      <p class="lang-en-content text-lg md:text-2xl mb-6 leading-snug">JSPS DC1 Fellow &amp; PhD Candidate<br>Waseda University · Behavioral &amp; Chemical Ecology</p>
+      <p class="lang-ja-content hidden text-lg md:text-2xl mb-6 leading-snug">日本学術振興会 特別研究員 (DC1) / 早稲田大学博士後期課程<br>行動・化学生態学</p>
+      <nav class="space-x-4 text-sm md:text-base">
+        <a href="#about" class="hover:underline">About / 自己紹介</a>
+        <a href="#research" class="hover:underline">Research / 研究</a>
+        <a href="#publications" class="hover:underline">Publications / 論文</a>
+        <a href="#funding" class="hover:underline">Funding &amp; Awards / 研究費・受賞</a>
+        <a href="#presentations" class="hover:underline">Talks / 口頭発表</a>
+        <a href="#teaching" class="hover:underline">Teaching / 教育</a>
+        <a href="#outreach" class="hover:underline">Outreach / 社会貢献</a>
+        <a href="#contact" class="hover:underline">Contact / 連絡先</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="py-16">
     <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-3xl font-semibold mb-4">About</h2>
-      <p class="mb-4">I study snakes to uncover how chemical cues shape predator–prey interactions and communication. My work integrates behavioral experiments, chemical analyses, and field ecology to reveal novel defense strategies in reptiles. </p>
-      <p>Currently, I am a PhD candidate at Waseda University (Graduate School of Advanced Science and Engineering) and a JSPS DC1 Research Fellow.</p>
+      <h2 class="text-3xl font-semibold mb-4">About / 自己紹介</h2>
+      <div class="lang-en-content space-y-4">
+        <p>I explore how <strong>chemical cues</strong> and <strong>behavior</strong> shape predator–prey interactions in reptiles—especially snakes. Combining behavioral experiments, field ecology, and analytical chemistry, my research uncovers novel <em>indirect defense mechanisms</em> driven by odor.</p>
+        <p>My broader interests span biodiversity surveys, conservation, and science communication.</p>
+      </div>
+      <div class="lang-ja-content hidden space-y-4">
+        <p>私は<strong>化学物質</strong>と<strong>行動</strong>が爬虫類（特にヘビ）の捕食—被食相互作用をどのように形成するかを研究しています。行動実験・野外観察・化学分析を組み合わせ、<em>匂いに基づく間接防御機構</em>を解明することが目的です。</p>
+        <p>多様性調査や保全、生物に関するサイエンスコミュニケーションにも関心があります。</p>
+      </div>
     </div>
   </section>
 
-  <!-- Research Interests -->
+  <!-- Research Section -->
   <section id="research" class="py-16 bg-gray-50">
     <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-3xl font-semibold mb-4">Research Interests</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li>Chemical communication &amp; predator avoidance</li>
-        <li>Behavioral ecology of reptiles</li>
-        <li>Indirect defense mechanisms</li>
-        <li>Biodiversity surveys &amp; conservation</li>
-      </ul>
+      <h2 class="text-3xl font-semibold mb-4">Research Projects / 研究テーマ</h2>
+      <div class="space-y-6">
+        <!-- Project 1 -->
+        <article class="p-4 bg-white rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">The Snake "Curse" Hypothesis / ヘビの“呪い”仮説</h3>
+          <p class="lang-en-content">Testing whether malodorous secretions released by bitten snakes attract higher-level predators and thus deter attackers.</p>
+          <p class="lang-ja-content hidden">咬傷を受けたヘビが放出する悪臭物質が第三の捕食者を誘引し、攻撃者を抑止する「間接防御」を検証する。</p>
+        </article>
+        <!-- Project 2 -->
+        <article class="p-4 bg-white rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Vibration-Mediated Communication / 振動伝搬による情報伝達</h3>
+          <p class="lang-en-content">Revealing intraspecific signals transmitted through substrate-borne vibrations in snakes.</p>
+          <p class="lang-ja-content hidden">基質振動を介したヘビ類の体内コミュニケーションを解明する。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV Section -->
+  <section id="cv" class="py-16">
+    <div class="container mx-auto px-6 max-w-4xl grid md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-3xl font-semibold mb-4">Education / 学歴</h2>
+        <ul class="space-y-2">
+          <li class="lang-en-content"><strong>M.Sc. in Science</strong> — Waseda University, 2024</li>
+          <li class="lang-en-content"><strong>B.Sc. in Science</strong> — Waseda University, 2022</li>
+          <li class="lang-ja-content hidden"><strong>修士（理学）</strong> — 早稲田大学, 2024 年</li>
+          <li class="lang-ja-content hidden"><strong>学士（理学）</strong> — 早稲田大学, 2022 年</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-3xl font-semibold mb-4">Appointments / 職歴</h2>
+        <ul class="space-y-2">
+          <li class="lang-en-content">2024-Present — JSPS Research Fellow (DC1), Waseda University</li>
+          <li class="lang-en-content">2022-Present — PhD Candidate, Waseda University</li>
+          <li class="lang-ja-content hidden">2024-現在 — 日本学術振興会 特別研究員 DC1（早稲田大学）</li>
+          <li class="lang-ja-content hidden">2022-現在 — 早稲田大学 博士後期課程</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- Publications -->
-  <section id="publications" class="py-16">
+  <section id="publications" class="py-16 bg-gray-50">
     <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-3xl font-semibold mb-4">Selected Publications</h2>
-      <ol class="space-y-4">
-        <li><span class="font-semibold">Akimoto, H.</span> (2023). <em>INDOTYPHLOPS BRAMINUS (Brahminy Blindsnake). PREDATION.</em> <strong>Herpetological Review</strong>, 54(3), 486.</li>
-        <li>Hamanaka, K., <span class="font-semibold">Akimoto, H.</span>, Otake, A., Yamamoto, K., &amp; Nishikawa, K. (2023). <em>Andrias japonicus (Japanese Giant Salamander). Diet.</em></li>
-        <li><span class="font-semibold">Akimoto, H.</span> (2025). Poster Award: “Curse of Snakes”. Japanese Ecological Society.</li>
+      <h2 class="text-3xl font-semibold mb-4">Publications / 論文</h2>
+      <ol class="space-y-3 list-decimal list-inside">
+        <li>
+          <p class="lang-en-content"><strong>Akimoto, H.</strong> (2023) “<em>Indotyphlops braminus (Brahminy Blindsnake): Predation</em>.” <u>Herpetological Review</u> 54(3): 486.</p>
+          <p class="lang-ja-content hidden"><strong>Akimoto, H.</strong> (2023) 「<em>Indotyphlops braminus（コブラミミズヘビ）：捕食</em>」 <u>Herpetological Review</u> 54(3): 486.</p>
+        </li>
+        <li>
+          <p class="lang-en-content">Hamanaka, K.; <strong>Akimoto, H.</strong>; et&nbsp;al. (2023) “<em>Andrias japonicus (Japanese Giant Salamander): Diet</em>.”</p>
+          <p class="lang-ja-content hidden">濱中桂太・<strong>秋元洋希</strong>・他 (2023) 「<em>オオサンショウウオの食性</em>」</p>
+        </li>
       </ol>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16 bg-gray-50">
+  <!-- Funding & Awards -->
+  <section id="funding" class="py-16">
     <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+      <h2 class="text-3xl font-semibold mb-4">Funding &amp; Awards / 研究費・受賞</h2>
+      <ul class="space-y-2 list-disc list-inside">
+        <li class="lang-en-content"><strong>JSPS Research Fellowship Grant</strong> (2024-2027) — “Testing the Snake Curse Hypothesis.”</li>
+        <li class="lang-ja-content hidden"><strong>日本学術振興会 特別研究員奨励費</strong> (2024-2027) — 「ヘビの呪い仮説の検証」</li>
+        <li class="lang-en-content"><strong>Poster Award</strong>, Ecological Society of Japan (Mar 2025).</li>
+        <li class="lang-ja-content hidden"><strong>ポスター賞（優秀賞）</strong> 日本生態学会（2025年3月）。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Presentations -->
+  <section id="presentations" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-3xl font-semibold mb-4">Selected Presentations / 代表的な発表</h2>
+      <ul class="space-y-2 list-disc list-inside">
+        <li>
+          <span class="lang-en-content">“Why Do Snakes Stink? Testing the Curse Hypothesis.” 62nd Japanese Herpetological Society Meeting, Dec 2023.</span>
+          <span class="lang-ja-content hidden">「ヘビはなぜ臭いのか? ―呪い仮説の検証―」 第62回日本爬虫両棲類学会, 2023年12月</span>
+        </li>
+        <li>
+          <span class="lang-en-content">Poster, Ecological Society of Japan, Mar 2025.</span>
+          <span class="lang-ja-content hidden">ポスター発表 日本生態学会, 2025年3月</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Teaching -->
+  <section id="teaching" class="py-16">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-3xl font-semibold mb-4">Teaching / 教育歴</h2>
+      <p class="lang-en-content">Teaching Assistant, Biology Experiment VIII, School of Education, Waseda University (2022-2024).</p>
+      <p class="lang-ja-content hidden">教育学部「生物学実験 VIII」ティーチングアシスタント（2022-2024）</p>
+    </div>
+  </section>
+
+  <!-- Outreach -->
+  <section id="outreach" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-3xl font-semibold mb-4">Outreach &amp; Service / 社会貢献</h2>
+      <ul class="space-y-2 list-disc list-inside">
+        <li class="lang-en-content"><strong>Science Café 2022</strong> — Lecturer, Terumo Life Science Foundation.</li>
+        <li class="lang-ja-content hidden"><strong>サイエンスカフェ 2022</strong> — 講師（テルモ生命科学振興財団）。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-3xl font-semibold mb-4">Contact / 連絡先</h2>
       <p>Email: <a href="mailto:autumnorigin@akane.waseda.jp" class="text-blue-600 hover:underline">autumnorigin@akane.waseda.jp</a></p>
-      <p>Twitter: <a href="https://twitter.com/" class="text-blue-600 hover:underline">Coming soon</a></p>
+      <p>Twitter / X: <a href="https://twitter.com/" class="text-blue-600 hover:underline">@ComingSoon</a></p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="py-6 text-center text-sm text-gray-500">
-    &copy; 2025 Hiroki Akimoto
+    &copy; 2025 Hiroki Akimoto · Built with TailwindCSS
   </footer>
+
+  <!-- Language Toggle Script -->
+  <script>
+    const btn = document.getElementById('langToggle');
+    btn.addEventListener('click', () => {
+      const html = document.documentElement;
+      const toJa = html.classList.contains('lang-en');
+      html.classList.toggle('lang-en', !toJa);
+      html.classList.toggle('lang-ja', toJa);
+      document.querySelectorAll('.lang-en-content').forEach(el => el.classList.toggle('hidden', toJa));
+      document.querySelectorAll('.lang-ja-content').forEach(el => el.classList.toggle('hidden', !toJa));
+      btn.textContent = toJa ? 'English' : '日本語';
+    });
+  </script>
 </body>
 </html>
