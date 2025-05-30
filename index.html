@@ -4,84 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>秋元洋希 | Hiroki Akimoto</title>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
-  <!-- Tailwind CSS CDN -->
+
+  <!-- Tailwind CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
   <style>
-    :root{
-      --accent:#004b8d;
-      --accent-light:#0466c8;
-      --bg:#f7f7f2;
-    }
+    :root{ --accent:#004b8d; --bg:#f7f7f2; }
     body{background:var(--bg);font-family:"Quicksand","Zen Maru Gothic",sans-serif;}
-    h1,h2,h3,h4{font-weight:700;color:var(--accent);}  
+    h1,h2,h3,h4{font-weight:700;color:var(--accent);}
+    /* 丸アイコン見出し */
     .circle{position:relative;display:inline-block;padding-left:3rem;}
-    .circle::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:2.2rem;height:2.2rem;border-radius:50%;background:var(--accent);}  
-    .circle .en{display:block;font-size:.8rem;color:#555;line-height:1.1;}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 2px 6px rgba(0,0,0,.07);}  
+    .circle::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:2.2rem;height:2.2rem;border-radius:50%;background:var(--accent);}
+    .circle .en{display:block;font-size:.8rem;color:#555;}
+    /* 汎用カード */
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 2px 6px rgba(0,0,0,.07);}
+    /* フェードイン */
     @keyframes fade{0%{opacity:0;transform:translateY(40px);}100%{opacity:1;transform:none;}}
     .fade{opacity:0;}
     .show{animation:fade .8s ease-out forwards;}
   </style>
 </head>
+
 <body class="overflow-x-hidden">
-<!-- NAVBAR -->
+
+<!-- ========= NAVIGATION ========= -->
 <header class="fixed inset-x-0 top-0 bg-white shadow z-50">
   <div class="container mx-auto flex justify-between items-center px-4 py-3">
     <a href="#top" class="text-xl font-bold text-blue-700">Hiroki&nbsp;Akimoto</a>
     <nav class="hidden md:flex space-x-6 text-sm font-semibold">
-      <a href="#about" class="hover:text-blue-600">About</a>
-      <a href="#research" class="hover:text-blue-600">Research</a>
+      <a href="#about"        class="hover:text-blue-600">About</a>
+      <a href="#research"     class="hover:text-blue-600">Research</a>
       <a href="#publications" class="hover:text-blue-600">Publications</a>
-      <a href="#presentations" class="hover:text-blue-600">Talks</a>
-      <a href="#funding" class="hover:text-blue-600">Funding</a>
-      <a href="#teaching" class="hover:text-blue-600">Teaching</a>
-      <a href="#contact" class="hover:text-blue-600">Contact</a>
+      <a href="#presentations"class="hover:text-blue-600">Talks</a>
+      <a href="#funding"      class="hover:text-blue-600">Funding</a>
+      <a href="#teaching"     class="hover:text-blue-600">Teaching</a>
+      <a href="#contact"      class="hover:text-blue-600">Contact</a>
     </nav>
-    <button id="menuBtn" class="md:hidden focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" fill="none"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <button id="menuBtn" class="md:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
     </button>
   </div>
-  <div id="mobileMenu" class="hidden md:hidden bg-white border-t pb-4 text-sm font-semibold">
-    <a href="#about" class="block px-4 py-2">About</a>
-    <a href="#research" class="block px-4 py-2">Research</a>
-    <a href="#publications" class="block px-4 py-2">Publications</a>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t text-sm font-semibold">
+    <a href="#about"         class="block px-4 py-2">About</a>
+    <a href="#research"      class="block px-4 py-2">Research</a>
+    <a href="#publications"  class="block px-4 py-2">Publications</a>
     <a href="#presentations" class="block px-4 py-2">Talks</a>
-    <a href="#funding" class="block px-4 py-2">Funding</a>
-    <a href="#teaching" class="block px-4 py-2">Teaching</a>
-    <a href="#contact" class="block px-4 py-2">Contact</a>
+    <a href="#funding"       class="block px-4 py-2">Funding</a>
+    <a href="#teaching"      class="block px-4 py-2">Teaching</a>
+    <a href="#contact"       class="block px-4 py-2">Contact</a>
   </div>
 </header>
 
-<!-- HERO -->
+<!-- ========= HERO ========= -->
 <section id="top" class="pt-32 bg-cover bg-center" style="background-image:url('images/IMG_3352.jpeg');">
   <div class="backdrop-brightness-75 text-center text-white py-24 px-6">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Hiroki Akimoto</h1>
     <p class="text-lg md:text-2xl mb-2">JSPS DC1 Fellow · PhD Candidate, Waseda University</p>
     <p class="max-w-2xl mx-auto mb-6">Behavioral & Chemical Ecology — exploring odor-mediated predator–prey interactions and communication in reptiles.</p>
-    <a href="#about" class="bg-blue-700 hover:bg-blue-600 text-white px-6 py-3 rounded-full shadow transition">Read More</a>
+    <a href="#about" class="bg-blue-700 hover:bg-blue-600 text-white px-6 py-3 rounded-full shadow">Read More</a>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ========= ABOUT ========= -->
 <section id="about" class="py-16 bg-white">
   <div class="container mx-auto max-w-4xl px-6">
     <h2 class="circle mb-8"><span class="jp">自己紹介</span><span class="en">About</span></h2>
-    <p class="mb-6 fade" data-f>ヘビを主なモデルに<strong>匂い</strong>と<strong>行動</strong>を結びつけた間接防御メカニズムを解明しています。趣味を兼ねたファウナ調査や保全生態学にも関心があります。研究キーワードは化学コミュニケーション、捕食回避、行動生態など。</p>
+    <p class="mb-6 fade" data-f>ヘビをモデルに<strong>匂い</strong>と<strong>行動</strong>が織り成す間接防御メカニズムを解明しています。化学コミュニケーション・捕食回避・行動生態が主なキーワード。</p>
+
     <div class="grid md:grid-cols-2 gap-8 text-sm">
       <div class="fade" data-f>
         <h3 class="font-semibold text-blue-700 mb-2">基本情報</h3>
         <ul class="list-disc list-inside space-y-1">
-          <li><strong>所属:</strong> 早稲田大学 大学院先進理工学研究科</li>
+          <li><strong>所属:</strong> 早稲田大学 先進理工学研究科</li>
           <li><strong>研究員:</strong> 日本学術振興会 特別研究員 (DC1)</li>
-          <li><strong>連絡先:</strong> autumnorigin@akane.waseda.jp</li>
+          <li><strong>Email:</strong> autumnorigin@akane.waseda.jp</li>
         </ul>
       </div>
       <div class="fade" data-f>
-        <h3 class="font-semibold text-blue-700 mb-2">学位 / Education</h3>
+        <h3 class="font-semibold text-blue-700 mb-2">学歴 / Education</h3>
         <ul class="list-disc list-inside space-y-1">
           <li>Ph.D. candidate, Life Science (2022–)</li>
           <li>M.Sc. in Science (2024)</li>
@@ -92,51 +99,112 @@
   </div>
 </section>
 
-<!-- RESEARCH -->
+<!-- ========= RESEARCH ========= -->
 <section id="research" class="py-16 bg-gray-50">
   <div class="container mx-auto max-w-4xl px-6">
     <h2 class="circle mb-8"><span class="jp">研究テーマ</span><span class="en">Research Topics</span></h2>
     <div class="grid md:grid-cols-2 gap-6">
-      <!-- four main topics -->
       <article class="card p-6 flex space-x-4 fade" data-f>
-        <img src="images/proj_curse.svg" class="w-16 h-16" alt="curse" />
-        <div><h3 class="text-lg font-semibold mb-1">ヘビの“呪い”仮説</h3><p>咬傷後に放たれる悪臭が上位捕食者を誘引し攻撃者を抑止する間接防御を検証。</p></div>
+        <img src="images/proj_curse.svg" class="w-16 h-16" alt="">
+        <div><h3 class="text-lg font-semibold mb-1">ヘビの“呪い”仮説</h3><p>咬傷後の悪臭が上位捕食者を誘引し攻撃者を抑止するかを検証。</p></div>
       </article>
       <article class="card p-6 flex space-x-4 fade" data-f>
-        <img src="images/proj_vibration.svg" class="w-16 h-16" alt="vibration" />
+        <img src="images/proj_vibration.svg" class="w-16 h-16" alt="">
         <div><h3 class="text-lg font-semibold mb-1">振動コミュニケーション</h3><p>基質振動を介したヘビ類のシグナル伝達機構を解明。</p></div>
       </article>
       <article class="card p-6 flex space-x-4 fade" data-f>
-        <img src="images/proj_network.svg" class="w-16 h-16" alt="network" />
-        <div><h3 class="text-lg font-semibold mb-1">匂いネットワーク解析</h3><p>化学物質を媒介する多種間ネットワークを数理モデルと野外実験で解析。</p></div>
+        <img src="images/proj_network.svg" class="w-16 h-16" alt="">
+        <div><h3 class="text-lg font-semibold mb-1">匂いネットワーク解析</h3><p>化学物質を媒介する多種間ネットワークを数理モデルで解析。</p></div>
       </article>
       <article class="card p-6 flex space-x-4 fade" data-f>
-        <img src="images/proj_biodiversity.svg" class="w-16 h-16" alt="biodiversity" />
-        <div><h3 class="text-lg font-semibold mb-1">多様性調査 & 保全</h3><p>国内外で爬虫類・昆虫の分布調査を行い保全に貢献。</p></div>
+        <img src="images/proj_biodiversity.svg" class="w-16 h-16" alt="">
+        <div><h3 class="text-lg font-semibold mb-1">多様性調査 & 保全</h3><p>国内外で爬虫類・昆虫の分布調査を行い保全計画に貢献。</p></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- PUBLICATIONS -->
+<!-- ========= PUBLICATIONS ========= -->
 <section id="publications" class="py-16 bg-white">
   <div class="container mx-auto max-w-4xl px-6">
     <h2 class="circle mb-8"><span class="jp">論文</span><span class="en">Peer-reviewed Papers</span></h2>
     <ol class="list-decimal list-inside space-y-2 text-sm fade" data-f>
-      <li><strong>Akimoto, H.</strong> (2023) “INDOTYPHLOPS BRAMINUS: Predation.” <u>Herpetological Review</u> 54(3):486.</li>
-      <li>Hamanaka, K.; <strong>Akimoto, H.</strong>; Otake, A.; Yamamoto, K.; Nishikawa, K. (2023) “<em>Andrias japonicus</em>: Diet.” <u>Herpetological Review</u>.</li>
-      <li><strong>Akimoto, H.</strong> (2020) “INDOTYPHLOPS BRAMINUS.” <u>Herpetological Review</u> 51(3):554-555.</li>
+      <li><strong>Akimoto, H.</strong> (2023) “INDOTYPHLOPS BRAMINUS: Predation.” <u>Herpetological Review</u> 54(3): 486.</li>
+      <li>Hamanaka, K.; <strong>Akimoto, H.</strong>; et al. (2023) Diet of <em>Andrias japonicus</em>. <u>Herpetological Review</u>.</li>
+      <li><strong>Akimoto, H.</strong> (2020) “INDOTYPHLOPS BRAMINUS.” <u>Herpetological Review</u> 51(3): 554-555.</li>
     </ol>
 
     <h3 class="font-semibold text-blue-700 mt-8 mb-2 fade" data-f>MISC Notes</h3>
     <ul class="list-disc list-inside space-y-1 text-sm fade" data-f>
-      <li>岐阜県におけるオオノコバヨトウの記録. <u>月刊むし</u> 650:51 (2025).</li>
-      <li>八丈島の蛾類 18 種の記録. <u>蛾類通信</u> 312:352-354 (2024).</li>
+      <li>岐阜県におけるオオノコバヨトウの記録. <u>月刊むし</u> 650: 51 (2025).</li>
+      <li>八丈島の蛾類 18 種の記録. <u>蛾類通信</u> 312: 352-354 (2024).</li>
       <li>西表島ほか, 昆虫追加記録 (2022-2024).</li>
     </ul>
   </div>
 </section>
 
-<!-- PRESENTATIONS -->
+<!-- ========= PRESENTATIONS ========= -->
 <section id="presentations" class="py-16 bg-gray-50">
-  <div class="container mx-auto max-w-
+  <div class="container mx-auto max-w-4xl px-6">
+    <h2 class="circle mb-8"><span class="jp">学会発表</span><span class="en">Talks</span></h2>
+    <ul class="list-disc list-inside space-y-2 text-sm fade" data-f>
+      <li>“Why Do Snakes Stink? Testing the Curse Hypothesis.” Japanese Herpetological Society Meeting (Dec 2023).</li>
+      <li>Poster, Ecological Society of Japan (Mar 2025).</li>
+      <li>“Odor-Mediated Indirect Defense in Snakes.” ABS Japan (Nov 2024).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========= FUNDING & AWARDS ========= -->
+<section id="funding" class="py-16 bg-white">
+  <div class="container mx-auto max-w-4xl px-6">
+    <h2 class="circle mb-8"><span class="jp">研究費・受賞</span><span class="en">Funding & Awards</span></h2>
+    <ul class="list-disc list-inside space-y-2 text-sm fade" data-f>
+      <li>JSPS Research Fellowship Grant (2024-2027)</li>
+      <li>Early Bird Program Grant, Waseda University (2024-2025)</li>
+      <li>Poster Award (Excellence), Ecological Society of Japan (2025)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========= TEACHING ========= -->
+<section id="teaching" class="py-16 bg-gray-50">
+  <div class="container mx-auto max-w-4xl px-6">
+    <h2 class="circle mb-8"><span class="jp">教育歴</span><span class="en">Teaching</span></h2>
+    <p class="text-sm fade" data-f>Teaching Assistant, Biology Experiment VIII, Waseda University (2022-2024).</p>
+  </div>
+</section>
+
+<!-- ========= CONTACT ========= -->
+<section id="contact" class="py-16 bg-white">
+  <div class="container mx-auto max-w-4xl px-6 text-center">
+    <h2 class="circle inline-block mb-8"><span class="jp">連絡先</span><span class="en">Contact</span></h2>
+    <p class="mb-2 fade" data-f>Email : <a href="mailto:autumnorigin@akane.waseda.jp" class="text-blue-700 hover:underline">autumnorigin@akane.waseda.jp</a></p>
+    <p class="fade" data-f>Twitter : <a href="https://twitter.com/" class="text-blue-700 hover:underline">@ComingSoon</a></p>
+  </div>
+</section>
+
+<!-- ========= FOOTER ========= -->
+<footer class="bg-white border-t py-6 text-center text-xs text-gray-500">
+  <p class="mb-2">© 2025 Hiroki Akimoto</p>
+  <p class="italic">“You cannot build world peace on empty stomachs and human misery.” — Norman Borlaug</p>
+</footer>
+
+<!-- ========= SCRIPTS ========= -->
+<script>
+  /* mobile menu */
+  const menuBtn=document.getElementById('menuBtn');
+  const mobileMenu=document.getElementById('mobileMenu');
+  menuBtn?.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+
+  /* fade-in */
+  document.addEventListener('DOMContentLoaded',()=>{
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
+    },{threshold:0.15});
+    document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+  });
+</script>
+
+</body>
+</html>
