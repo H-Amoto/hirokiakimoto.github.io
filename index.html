@@ -6,7 +6,7 @@
   <title>秋元洋希 | Hiroki Akimoto</title>
 
   <!-- SEO -->
-  <meta name="description" content="秋元洋希 (Hiroki Akimoto) 公式サイト。博士課程・JSPS 特別研究員 DC1。ヘビを材料として、匂いによる捕食回避を研究しています。論文・講演・研究費・お知らせなど。" />
+  <meta name="description" content="秋元洋希 (Hiroki Akimoto) 公式サイト。博士課程・JSPS 特別研究員 DC1。ヘビの匂い行動学を研究。論文・学会発表・研究費・社会貢献活動などを掲載。" />
   <link rel="canonical" href="https://h-amoto.github.io/" />
 
   <!-- Fonts & Tailwind -->
@@ -19,15 +19,12 @@
     :root{--accent:#004b8d;--bg:#f7f7f2;}
     body{background:var(--bg);font-family:"Quicksand","Zen Maru Gothic",sans-serif;}
     h1,h2,h3{font-weight:700;color:var(--accent);}
-    /* 見出し用丸 */
     .circle{position:relative;padding-left:3rem;display:inline-block;}
-    .circle::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:2.2rem;height:2.2rem;border-radius:50%;background:var(--accent);}
+    .circle::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:2.2rem;height:2.2rem;border-radius:50%;background:var(--accent);}  
     .circle .en{display:block;font-size:.8rem;color:#555;}
-    /* 汎用カード */
     .card{background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 2px 6px rgba(0,0,0,.07);}
-    /* フェードイン */
     @keyframes fade{0%{opacity:0;transform:translateY(40px);}100%{opacity:1;transform:none;}}
-    .fade{opacity:0;} .show{animation:fade .8s ease-out forwards;}
+    .fade{opacity:0;}.show{animation:fade .8s ease-out forwards;}
   </style>
 </head>
 <body class="overflow-x-hidden">
@@ -39,12 +36,10 @@
     <nav class="hidden md:flex space-x-6 text-sm font-semibold">
       <a href="#news">News</a><a href="#about">About</a><a href="#research">Research</a>
       <a href="#publications">Publications</a><a href="#presentations">Talks</a>
-      <a href="#funding">Funding</a><a href="#teaching">Teaching</a><a href="#gallery">Photos</a><a href="#contact">Contact</a>
+      <a href="#funding">Funding</a><a href="#teaching">Teaching</a><a href="#outreach">Outreach</a><a href="#gallery">Photos</a><a href="#contact">Contact</a>
     </nav>
     <button id="menuBtn" class="md:hidden">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
   </div>
   <div id="mobileMenu" class="hidden md:hidden bg-white border-t text-sm font-semibold"></div>
@@ -56,8 +51,8 @@
   <div class="relative text-center text-white py-24 px-6">
     <h1 class="text-4xl md:text-6xl font-bold mb-2">秋元 洋希<br><span class="text-2xl md:text-4xl font-light">Hiroki Akimoto</span></h1>
     <p class="text-lg md:text-xl mb-2">博士課程・JSPS 特別研究員 (DC1)</p>
-    <p class="max-w-2xl mx-auto mb-6">Behavioral&nbsp;&amp;&nbsp;Chemical Ecology — exploring odor-mediated predator–prey interactions.</p>
-    <a href="#about" class="bg-blue-700 hover:bg-blue-600 text-white px-6 py-3 rounded-full shadow transition">Read&nbsp;More</a>
+    <p class="max-w-2xl mx-auto mb-6">Behavioral &amp; Chemical Ecology — exploring odor‑mediated predator–prey interactions.</p>
+    <a href="#about" class="bg-blue-700 hover:bg-blue-600 text-white px-6 py-3 rounded-full shadow transition">Read More</a>
   </div>
 </section>
 
@@ -66,7 +61,9 @@
   <div class="container mx-auto max-w-4xl px-6">
     <h2 class="circle mb-8"><span class="jp">お知らせ</span><span class="en">News</span></h2>
     <ul class="space-y-4 text-sm md:text-base fade" data-f>
-      <li class="flex justify-between border-b pb-2"><span>2025-05-31</span><span>個人サイトを作成しました</span></li>
+      <li class="flex justify-between border-b pb-2"><span>2025-05-31</span><span>個人サイトを公開しました</span></li>
+      <li class="flex justify-between border-b pb-2"><span>2025-03-16</span><span>日本生態学会でポスター賞（優秀賞）受賞</span></li>
+      <li class="flex justify-between border-b pb-2"><span>2025-03-07</span><span>超異分野学会 東京大会で招待講演</span></li>
     </ul>
   </div>
 </section>
@@ -75,9 +72,7 @@
 <section id="about" class="py-16 bg-white">
   <div class="container mx-auto max-w-4xl px-6">
     <h2 class="circle mb-8"><span class="jp">自己紹介</span><span class="en">About</span></h2>
-    <p class="mb-6 fade" data-f>
-      ヘビをモデルに<strong>匂い</strong>が織り成す間接防御メカニズムを研究しています。
-    </p>
+    <p class="mb-6 fade" data-f>ヘビをモデルに<strong>匂い</strong>が織り成す間接防御メカニズムを研究。化学コミュニケーション・捕食回避・行動生態がキーワード。</p>
 
     <div class="grid md:grid-cols-2 gap-8 text-sm">
       <div class="fade" data-f>
@@ -85,11 +80,11 @@
         <ul class="list-disc list-inside space-y-1">
           <li>早稲田大学 大学院先進理工学研究科 生命理工学専攻（博士課程）</li>
           <li>日本学術振興会 特別研究員 (DC1)</li>
-          <li>Email : autumnorigin（@）akane.waseda.jp</li>
+          <li>Email : autumnorigin@akane.waseda.jp</li>
         </ul>
       </div>
       <div class="fade" data-f>
-        <h3 class="font-semibold text-blue-700 mb-2">キーワード</h3>
+        <h3 class="font-semibold text-blue-700 mb-2">研究キーワード</h3>
         <div class="flex flex-wrap gap-2">
           <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Chemical communication</span>
           <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Behavioral ecology</span>
@@ -108,126 +103,11 @@
     <div class="grid md:grid-cols-2 gap-6">
       <article class="card p-6 flex space-x-4 fade" data-f>
         <img src="images/proj_curse.svg" class="w-16 h-16" alt="curse">
-        <div><h3 class="text-lg font-semibold mb-1">ヘビの“呪い”仮説</h3><p>ヘビが放つ”悪臭”が天敵の天敵を誘引し攻撃者を抑止するという新規間接防御を検証中。</p></div>
+        <div><h3 class="text-lg font-semibold mb-1">ヘビの“呪い”仮説</h3><p>ヘビが放つ悪臭が高次捕食者を誘引し攻撃者を抑止する新規間接防御メカニズム。</p></div>
       </article>
       <article class="card p-6 flex space-x-4 fade" data-f>
         <img src="images/proj_vibration.svg" class="w-16 h-16" alt="vibration">
-        <div><h3 class="text-lg font-semibold mb-1">振動コミュニケーション</h3><p>基質振動によるヘビ類の情報伝達機構を検証中。</p></div>
+        <div><h3 class="text-lg font-semibold mb-1">振動コミュニケーション</h3><p>基質振動によるヘビ類のシグナル伝達機構の解明。</p></div>
       </article>
       <article class="card p-6 flex space-x-4 fade" data-f>
-        <img src="images/proj_biodiversity.svg" class="w-16 h-16" alt="biodiversity">
-        <div><h3 class="text-lg font-semibold mb-1">多様性調査 &amp; 保全</h3><p>爬虫類・昆虫の分布調査（ほぼ趣味です）。</p></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PUBLICATIONS ===== -->
-<section id="publications" class="py-16 bg-white">
-  <div class="container mx-auto max-w-4xl px-6">
-    <h2 class="circle mb-8"><span class="jp">論文</span><span class="en">Peer-reviewed</span></h2>
-    <ol class="list-decimal list-inside space-y-2 text-sm fade" data-f>
-      <li><strong>Akimoto, H.</strong> 2023. <em>Indotyphlops braminus</em> (Brahminy Blindsnake): Predation. <u>Herpetological Review</u> 54(3):486.</li>
-      <li>Hamanaka, K.; <strong>Akimoto, H.</strong>; Otake, A.; Yamamoto, K.; Nishikawa, K. 2020. <em>Andrias japonicus</em>: Diet. <u>Herpetological Review</u> 51(3):554-555.</li>
-    </ol>
-
-    <h3 class="font-semibold text-blue-700 mt-8 mb-2 fade" data-f>MISC</h3>
-    <ul class="list-disc list-inside space-y-1 text-sm fade" data-f>
-      <li>秋元洋希 2025. 岐阜県におけるオオノコバヨトウの記録. <u>月刊むし</u> 650:51.</li>
-      <li>秋元洋希・曲雅慧 2024. 八丈島における蛾類 18 種の記録. <u>蛾類通信</u> 312:352-354.</li>
-      <li>秋元洋希 2024. 沖縄本島におけるホソヒラタデオキスイの記録. <u>月刊むし</u> 646:31.</li>
-      <li>秋元洋希 2024. 八丈島におけるヒロズカメムシの記録. <u>月刊むし</u> 645:60.</li>
-      <li>秋元洋希 2023. 西表島におけるアトグロホソバの追加記録. <u>月刊むし</u> 624:46.</li>
-      <li>秋元洋希 2022. 西表島におけるタイワンタマヌキオニゾウムシの記録. <u>月刊むし</u> 622:5.</li>
-      <li>秋元洋希 2022. 栃木県 2 例目となるアオヘリアオゴミムシの記録. <u>月刊むし</u> 616:59.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ===== PRESENTATIONS ===== -->
-<section id="presentations" class="py-16 bg-gray-50">
-  <div class="container mx-auto max-w-4xl px-6">
-    <h2 class="circle mb-8"><span class="jp">講演・発表</span><span class="en">Talks</span></h2>
-    <ul class="list-disc list-inside space-y-2 text-sm fade" data-f>
-      <li>ヘビの「呪い」: ヘビ類の臭い分泌物には高次捕食者を誘引して身を守る機能がある（秋元洋希・細将貴）— 日本生態学会第72回大会 <strong>★ポスター賞 優秀賞★</strong>, 2025-03-16.</li>
-      <li>「悪臭」はなぜ捕食者を撃退できるのか：ヘビで挑む、臭いの謎（秋元洋希）— 超異分野学会東京大会 2025-03-07.</li>
-      <li>ヘビの「呪い」新規誘導防御機構（秋元洋希・細将貴）— 研究交流セミナー 2025-03-05.</li>
-      <li>ヘビの「呪い」間接防御機構（秋元洋希・細将貴）— ISMCRP 2025-01-08.</li>
-      <li>Revealing the Snake's 'Curse' (Akimoto H., Hoso M.) — SPE×Taiwan-Japan WS 2024-11-16.</li>
-      <li>ヘビの「呪い」は捕食者を招く（秋元洋希・細将貴）— 日本動物行動学会第43回大会 2024-11-03.</li>
-      <li>ヘビの「呪い」臭気忌避のメカニズム（秋元洋希）— JSPS DC Friendship Meeting 2024-06-15.</li>
-      <li>ヘビはなぜ臭うのか（秋元洋希・細将貴）— 研究交流セミナー 2024-02-29.</li>
-      <li>ヘビの「呪い」新規間接防御システム（秋元洋希）— 修士論文発表会 2024-02-18.</li>
-      <li>ヘビはなぜ臭うのか（秋元洋希・細将貴）— 日本爬虫両棲類学会第62回 2023-12-09.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ===== FUNDING ===== -->
-<section id="funding" class="py-16 bg-white">
-  <div class="container mx-auto max-w-4xl px-6">
-    <h2 class="circle mb-8"><span class="jp">研究費</span><span class="en">Funding</span></h2>
-    <ul class="list-disc list-inside space-y-2 text-sm fade" data-f>
-      <li>日本学術振興会 科研費 <strong>特別研究員奨励費</strong>「ヘビの臭腺分泌物による『呪い仮説』の検証」— 2024-04-23 ⇢ 2027-03-31 (PI)</li>
-      <li>株式会社リバネス <strong>incu·be 賞</strong>「ヘビは振動で会話する」— 2025 ⇢ 2026</li>
-      <li>早稲田大学 <strong>アーリーバードプログラム</strong>「ヘビの『呪い』新規間接防御システム」— 2024-06 ⇢ 2025-03</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ===== TEACHING ===== -->
-<section id="teaching" class="py-16 bg-gray-50">
-  <div class="container mx-auto max-w-4xl px-6">
-    <h2 class="circle mb-8"><span class="jp">担当科目</span><span class="en">Teaching</span></h2>
-    <ul class="list-disc list-inside space-y-1 text-sm fade" data-f>
-      <li>2024 – 生物学実験 VIII (TA) — 早稲田大学 教育学部</li>
-      <li>2023 – 生物学実験 VIII (TA) — 早稲田大学 教育学部</li>
-      <li>2022 – 生物学実験 VIII (TA) — 早稲田大学 教育学部</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ===== GALLERY ===== -->
-<section id="gallery" class="py-16 bg-white">
-  <div class="container mx-auto max-w-4xl px-6">
-    <h2 class="circle mb-8"><span class="jp">フォト</span><span class="en">Gallery</span></h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 fade" data-f>
-      <img src="images/photo_field.jpg" alt="Field work" class="rounded-lg shadow">
-      <img src="images/photo_lab.jpg" alt="Lab" class="rounded-lg shadow">
-      <img src="images/photo_conference.jpg" alt="Conference" class="rounded-lg shadow">
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="py-16 bg-gray-50">
-  <div class="container mx-auto max-w-4xl px-6 text-center">
-    <h2 class="circle inline-block mb-8"><span class="jp">連絡先</span><span class="en">Contact</span></h2>
-    <p class="mb-2 fade" data-f>Email : <a href="mailto:autumnorigin（@）akane.waseda.jp" class="text-blue-700 hover:underline">autumnorigin（@）akane.waseda.jp</a></p>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="bg-white border-t py-6 text-center text-xs text-gray-500">
-  <p class="mb-1">© 2025 Hiroki Akimoto</p>
-  <p class="italic">“You cannot build world peace on empty stomachs and human misery.” — N. Borlaug</p>
-</footer>
-
-<!-- ===== SCRIPTS ===== -->
-<script>
-/* mobile menu */
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
-
-/* fade-in */
-document.addEventListener('DOMContentLoaded',()=>{
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(e=>e.isIntersecting && e.target.classList.add('show'));
-  },{threshold:0.15});
-  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
-});
-</script>
-
-</body>
-</html>
+        <img src="images/proj_biodiversity.svg" class
